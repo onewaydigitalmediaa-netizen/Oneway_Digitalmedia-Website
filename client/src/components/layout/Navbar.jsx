@@ -56,13 +56,13 @@ export default function Navbar() {
   }, [location.pathname]);
 
   useEffect(() => {
-    if (!openDropdown) return undefined;
-
     const handlePointerDown = (event) => {
       if (!headerRef.current?.contains(event.target)) setOpenDropdown(null);
     };
     const handleKeyDown = (event) => {
-      if (event.key === 'Escape') setOpenDropdown(null);
+      if (event.key !== 'Escape') return;
+      setOpenDropdown(null);
+      if (mobileOpen) setMobileOpen(false);
     };
 
     document.addEventListener('pointerdown', handlePointerDown);
@@ -71,7 +71,7 @@ export default function Navbar() {
       document.removeEventListener('pointerdown', handlePointerDown);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [openDropdown]);
+  }, [mobileOpen]);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -153,6 +153,7 @@ export default function Navbar() {
               className="menu-toggle"
               aria-label={mobileOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
               aria-expanded={mobileOpen}
+              aria-controls="mobile-navigation-drawer"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
               {mobileOpen ? <FiX /> : <FiMenu />}
@@ -171,6 +172,7 @@ export default function Navbar() {
       {/* Mobile Navigation Drawer */}
       <aside
         className={`mobile-nav-drawer ${mobileOpen ? 'open' : ''}`}
+        id="mobile-navigation-drawer"
         aria-label="Mobile Navigation"
         aria-hidden={!mobileOpen}
       >

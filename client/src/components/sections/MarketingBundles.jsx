@@ -7,8 +7,8 @@ const bundles = [
   {
     id: 'google-ads-seo',
     name: 'Google Ads + SEO',
-    price: '₹45,000/mo',
-    description: '2 services in one plan, ₹5,000 less than buying them alone. Ad spend billed separately.',
+    description: 'Two services in one plan, combining paid acquisition with search visibility.',
+    outcome: 'Capture high-intent searches and turn them into qualified enquiries.',
     tags: ['Google Ads', 'SEO'],
     image: '/blog/photos/photo-seo.jpg',
     imageAlt: 'Marketing planning session with search analytics on a laptop',
@@ -16,8 +16,8 @@ const bundles = [
   {
     id: 'google-meta-ads',
     name: 'Google Ads + Meta Ads',
-    price: '₹40,500/mo',
-    description: '2 services in one plan, ₹4,500 less than buying them alone. Ad spend billed separately.',
+    description: 'Two services in one plan, connecting Google and Meta campaigns around one growth strategy.',
+    outcome: 'Create a connected acquisition loop from discovery to conversion.',
     tags: ['Google Ads', 'Meta Ads'],
     image: '/blog/photos/photo-geo.jpg',
     imageAlt: 'Digital marketing team reviewing campaign performance together',
@@ -25,8 +25,8 @@ const bundles = [
   {
     id: 'seo-local-seo',
     name: 'SEO + Local SEO',
-    price: '₹22,500/mo',
-    description: '2 services in one plan, ₹2,500 less than buying them alone.',
+    description: 'Two services in one plan, combining search visibility with local reach.',
+    outcome: 'Own local search moments and become the first trusted option nearby.',
     tags: ['SEO', 'Local SEO'],
     image: '/blog/photos/photo-analytics.jpg',
     imageAlt: 'Marketing team discussing digital advertising and analytics',
@@ -34,8 +34,8 @@ const bundles = [
   {
     id: 'google-meta-seo',
     name: 'Google Ads + Meta Ads + SEO',
-    price: '₹59,500/mo',
-    description: '3 services in one plan, ₹10,500 less than buying them alone. Ad spend billed separately.',
+    description: 'Three services in one plan, connecting paid acquisition, social campaigns and search visibility.',
+    outcome: 'Scale demand with paid reach, social proof and search visibility working together.',
     tags: ['Google Ads', 'Meta Ads', '+1 more'],
     image: '/blog/photos/photo-content.jpg',
     imageAlt: 'Marketer reviewing campaign data on a phone and computer',
@@ -43,8 +43,8 @@ const bundles = [
   {
     id: 'seo-website-local-seo',
     name: 'SEO + Website + Local SEO',
-    price: '₹72,250/mo',
-    description: '3 services in one plan, ₹12,750 less than buying them alone.',
+    description: 'Three services in one plan, connecting visibility, website conversion and local demand.',
+    outcome: 'Turn traffic into a faster, clearer path from first visit to enquiry.',
     tags: ['SEO', 'Website Development', '+1 more'],
     image: '/blog/photos/photo-cro.jpg',
     imageAlt: 'Team analyzing website and conversion performance charts',
@@ -52,8 +52,8 @@ const bundles = [
   {
     id: 'complete-digital-marketing',
     name: 'Complete Digital Marketing Package',
-    price: '₹70,400/mo',
-    description: '6 services in one plan, ₹17,600 less than buying them alone. Ad spend billed separately.',
+    description: 'A complete growth system across six connected digital marketing services.',
+    outcome: 'Bring every growth channel into one measurable operating system.',
     tags: ['Google Ads', 'Meta Ads', '+4 more'],
     image: '/blog/photos/photo-ai-calling.jpg',
     imageAlt: 'Smartphone displaying a performance dashboard beside a laptop',
@@ -206,7 +206,6 @@ export default function MarketingBundles() {
                   <div className="marketing-bundle-content">
                     <div className="marketing-bundle-topline">
                     <span className="marketing-bundle-index">OD / {String(index + 1).padStart(2, '0')}</span>
-                      <span className="marketing-bundle-price">{bundle.price}</span>
                     </div>
 
                     <div className="marketing-bundle-copy">
@@ -214,6 +213,7 @@ export default function MarketingBundles() {
                       <h3>{bundle.name}</h3>
                       <span className="marketing-bundle-divider" aria-hidden="true" />
                       <p className="marketing-bundle-description">{bundle.description}</p>
+                      <p className="marketing-bundle-outcome">{bundle.outcome}</p>
                       <ul className="marketing-bundle-tags" aria-label="Included services">
                         {bundle.tags.map((tag) => <li key={tag}>{tag}</li>)}
                       </ul>
@@ -266,7 +266,6 @@ export default function MarketingBundles() {
             </div>
             <p className="marketing-bundles-current" aria-live={isPaused ? 'polite' : 'off'}>
               <span>{activeBundle.name}</span>
-              <span>{activeBundle.price}</span>
             </p>
           </div>
         </div>

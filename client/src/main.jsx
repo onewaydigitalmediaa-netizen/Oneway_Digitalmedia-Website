@@ -12,6 +12,7 @@ import './styles/sections.css';
 import './styles/blog.css';
 import './styles/company.css';
 import './styles/growth-engine.css';
+import './styles/responsive.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

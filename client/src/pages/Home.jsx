@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import Hero from '../components/sections/Hero.jsx';
 import ServiceStrip from '../components/sections/ServiceStrip.jsx';
+import MarketingChannels from '../components/sections/MarketingChannels.jsx';
 import MarketingBundles from '../components/sections/MarketingBundles.jsx';
-import GrowthEngine from '../components/sections/GrowthEngine.jsx';
 import ProcessSteps from '../components/sections/ProcessSteps.jsx';
 import WhoWeWorkWith from '../components/sections/WhoWeWorkWith.jsx';
 import CtaSection from '../components/sections/CtaSection.jsx';
@@ -72,8 +72,8 @@ export default function Home() {
       {/* Services short version (4 cards) */}
       <ServiceStrip />
 
-      {/* How business insight connects to measurable growth */}
-      <GrowthEngine />
+      {/* All service channels and automation platforms */}
+      <MarketingChannels />
 
       {/* Ready-to-start service bundles */}
       <MarketingBundles />

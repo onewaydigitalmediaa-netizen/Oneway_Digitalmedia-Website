@@ -310,7 +310,7 @@
   border-radius: var(--radius-full);
   background: rgba(7, 10, 8, 0.52);
   color: rgba(255, 255, 255, 0.92);
-  font-size: 0.69rem;
+  font-size: 0.78rem;
   font-weight: 700;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -337,7 +337,7 @@
 .marketing-bundle-kicker {
   margin-bottom: 0.45rem;
   color: var(--lime-bright);
-  font-size: 0.67rem;
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -347,7 +347,7 @@
   max-width: 100%;
   margin: 0;
   color: var(--white);
-  font-size: clamp(1.4rem, 2.25vw, 1.9rem);
+  font-size: clamp(1.65rem, 2.8vw, 2.3rem);
   font-weight: 800;
   letter-spacing: -0.045em;
   line-height: 1.1;
@@ -367,8 +367,19 @@
   max-width: 32rem;
   margin: 0 0 0.8rem;
   color: rgba(255, 255, 255, 0.88);
-  font-size: 0.82rem;
-  line-height: 1.5;
+  font-size: clamp(0.95rem, 1.15vw, 1.08rem);
+  line-height: 1.55;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.marketing-bundle-outcome {
+  max-width: 32rem;
+  margin: -0.25rem 0 0.85rem;
+  color: var(--lime-bright);
+  font-size: clamp(0.88rem, 1vw, 0.98rem);
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
@@ -387,7 +398,7 @@
   border-radius: var(--radius-full);
   background: rgba(7, 10, 8, 0.62);
   color: rgba(255, 255, 255, 0.94);
-  font-size: 0.66rem;
+  font-size: 0.76rem;
   font-weight: 650;
   line-height: 1.2;
   backdrop-filter: blur(8px);
@@ -406,7 +417,7 @@
   background: linear-gradient(125deg, var(--lime-bright), var(--lime));
   box-shadow: 0 7px 22px rgba(139, 219, 69, 0.18);
   color: var(--ink);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 800;
   line-height: 1.2;
   transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
