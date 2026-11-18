@@ -335,7 +335,26 @@ footer,
   .hero-section {
     min-height: 0;
     padding-block: clamp(3.5rem, 13vw, 4.5rem) clamp(3rem, 10vw, 3.75rem);
-    background-position: 66% center;
+    background-image:
+      linear-gradient(180deg, rgba(7, 10, 8, 0.94) 0%, rgba(7, 10, 8, 0.82) 57%, rgba(7, 10, 8, 0.32) 100%),
+      url('/hero/hero-background.png');
+    background-position: center, 88% bottom;
+    background-size: auto, auto 42%;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(2.25rem, 11.5vw, 3.25rem);
+    line-height: 1.04;
+  }
+
+  .hero-lead {
+    max-width: 34rem;
+    font-size: 1rem;
+    line-height: 1.55;
   }
 
   .hero-title {
